@@ -17,7 +17,7 @@
     border: none;
     background-color: transparent;
     outline: none;
-    font-size: 20px;
+    font-size: 40px;
     display: none;
 }
 a {
@@ -281,7 +281,7 @@ nav {
     font-size: 46px !important;
 }
 .bg-2{
-    background-image: url('/images/bg-2.jpg');
+    background-image: url('../images/bg-2.jpg');
 
     width: 100%;
     background-position: center;
@@ -527,8 +527,8 @@ h1.f-big{
     #toggle-btn{
         display: block;
         position: absolute;
-        top: 30px;
-        right: 30px;
+        top: 15px;
+        right: 10px;
     }
     nav{
         flex-direction: column;
@@ -552,7 +552,7 @@ h1.f-big{
         letter-spacing: 5.25px !important;
     }
     .black-box{
-        width:400px !important;
+        width: 313px !important;
     }
     .best-text h1 {
         font-size: 40px !important;
@@ -579,7 +579,7 @@ h1.f-big{
         text-align: justify;
     }
     .more-vehicle {
-        width: 370px;
+        width: 335px;
         margin: 0 auto;
     }
     .we-do-text h1 {
