@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--primaryFont);
+}
+:root{
+    --primaryFont:'Poppins', sans-serif;
+    --secondaryFont:'Roboto', sans-serif;
+    --blue: #004aad;
+    --black: #171516;
+    --yellow: #f9d949;
+    --white: #f0f0f0;
+    --red: #f30b00;
+}
+#toggle-btn{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 20px;
+    display: none;
+}
+a {
+    text-decoration: none !important;
+    color: var(--black) !important;
+}
+.bg-white{
+    background-color: var(--white) !important;
+}
+.bg-blue{
+    background-color: var(--blue);
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+}
+.active2{
+    color: var(--red)!important;
+}
+.menu ul{
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+}
+.menu ul li a{
+    padding: 10px 15px;
+    font-weight: bold;
+}
+.menu ul li a:hover{
+    color: var(--red) !important;
+}
+.honda{
+    background-color: var(--blue);
+}
+.fcar-text h1{
+    font-size: 56px;
+    font-family: var(--secondaryFont);
+    color: var(--white);
+}
+.honda-part{
+    padding: 65px 0px;
+}
+.m-car{
+    text-align: right;
+}
+.m-car img{
+    width: 410px;
+}
+
+
+
+.suv-cars{
+    background-color: var(--blue);
+    padding-bottom: 40px;
+}
+.seadn-cars{
+    background-color: var(--blue);
+    padding-bottom: 40px;
+}
+.tempo{
+    background-color: var(--blue);
+    padding:40px 0px;
+}
+/* .car-row{
+    padding-top:40px;
+} */
+.cars-title{
+    margin-top: 50px;
+}
+.cars-title h1{
+    font-weight: bold;
+    color: var(--white);
+    font-family: var(--secondaryFont);
+    font-size: 30px !important;
+    border-bottom: 5px solid var(--yellow);
+    display: inline-block;
+}
+.cars-box{
+    text-align: center;
+}
+.box-bg{
+    background-color: var(--white);
+    padding: 16px 0px;
+}
+.cars-box h1,.cars-box h2 {
+    font-weight: bold;
+    color: var(--black);
+    font-family: var(--secondaryFont);
+    font-size: 24px !important;
+}
+.cars-box h1{
+    padding-top: 20px;
+}
+.cars-box p{
+    color: var(--black);
+    font-family: var(--primaryFont);
+    font-size: 16px !important;
+    font-weight: 300;
+}
+.cars-box a{
+    color: var(--white) !important;
+    font-family: var(--primaryFont);
+    font-size: 18px !important;
+    font-weight: bold;
+    background-color: var(--blue);
+    padding: 8px 12px;
+    width: 160px;
+    display: inline-block;
+}
+.cars-box img{
+    height: 110px;
+}
+.cars-range{
+    padding-top: 40px;
+    display: flex;
+}
+
+.r-box{
+    padding: 40px 0px;
+}
+.r-cont{
+    text-align: center;
+}
+.r-cont h3{
+    text-align: center;
+    color: var(--blue);
+    font-family: var(--secondaryFont);
+    font-size: 36px;
+    font-weight: 300;
+}
+.r-cont h2{
+    text-align: center !important;
+    color: var(--red);
+    font-family: var(--secondaryFont);
+    font-size: 60px;
+    font-weight: 300;
+    display: inline-block;
+
+ }
+/* .r-cont .f-star{
+    text-align: center;
+    color: var(--red);
+    font-family: var(--secondaryFont);
+    font-size: 60px;
+    font-weight: 300;
+    display: inline-block;
+ } */
+ 
+.r-cont .e-star{
+    text-align: center;
+    color: var(--blue);
+    font-family: var(--secondaryFont);
+    font-size: 60px;
+    font-weight: 300;
+    display: inline-block;
+    padding-top: 37px;
+}
+
+
+
+.more-vehicle{
+    border-radius: 10px;
+    margin: 0px 15px;
+
+}
+.part-1 h2{
+    font-weight: bold;
+    color: var(--white);
+    font-family: var(--secondaryFont);
+    font-size: 24px !important;
+}
+
+.ready-to-receive{
+    background-color: var(--blue);
+    padding: 40px 0;
+}
+.ready-text h1, .ready-text h2{
+    font-weight: bold;
+    color: var(--white);
+    font-family: var(--primaryFont)!important;
+    text-align: center;
+    font-size: 30px !important;
+}
+.ready-text h2{
+    font-family: var(--secondaryFont);
+    color: var(--yellow);
+}
+.footer{
+    background-color: var(--black);
+    padding: 40px 0;
+}
+.f-logo{
+    border-radius: 10px;
+    background-color: white;
+    padding: 5px;
+    text-align: center;
+}
+.f-link h1{
+    font-weight: bold;
+    color: var(--white);
+    font-family: var(--primaryFont)!important;
+    font-size: 30px !important;
+    margin-bottom: 0;
+}
+.f-link p{
+    font-weight: bold;
+    color: var(--white);
+    font-family: var(--primaryFont)!important;
+    font-size: 16px !important;
+    text-align: center;
+    margin-top: 0;
+}
+.f-num{
+    text-align: left !important;
+}
+.f-contact{
+    padding-top: 10px;
+}
+.f-contact img{
+    padding-left: 18px;
+}
+.f-link ul{
+    font-weight: 300;
+    color: var(--white);
+    font-family: var(--primaryFont)!important;
+    font-size: 20px !important;
+    list-style-type: none;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.f-link ul li img{
+    padding-right: 5px;
+}
+h1.f-big{
+    text-align: center;
+    font-size: 46px !important;
+    padding-top: 10px;
+}

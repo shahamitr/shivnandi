@@ -495,7 +495,9 @@ h1.f-big {
     font-size: 46px !important;
     padding-top: 10px;
 }
-
+.f-link a{
+    color: var(--white) !important;
+}
 
 /* ######## cars page css ######### */
 .honda {
@@ -669,7 +671,6 @@ h1.f-big {
 .ranker-ab{
     background-color: var(--blue);
 }
-
 .r-box-ab {
     padding: 40px 0px;
 }
@@ -677,7 +678,6 @@ h1.f-big {
 .r-cont-ab {
     text-align: center;
 }
-
 .r-cont-ab h3 {
     text-align: center;
     color: var(--white);
@@ -685,7 +685,6 @@ h1.f-big {
     font-size: 30px;
     font-weight: 300;
 }
-
 .r-cont-ab h2 {
     text-align: center !important;
     color: var(--yellow);
@@ -694,7 +693,6 @@ h1.f-big {
     font-weight: 300;
     display: inline-block;
 }
-
 .e-star-ab {
     color: var(--white);
 }
@@ -707,7 +705,126 @@ h1.f-big {
 }
 
 
-
+/* ######### tours ######## */
+.special{
+    position: relative;
+}
+.sp-text h1{
+    display: inline-block;
+    background-color: var(--blue);
+    color:var(--white);
+    font-family: var(--secondaryFont);
+    padding: 15px 30px;
+}
+.sp-tour{
+    position: absolute;
+    bottom: -45px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.tour-package{
+    margin-top: 50px;
+}
+.tour-text h1{
+    color: var(--black);
+    font-family: var(--secondaryFont);
+    font-size: 30px;
+    font-weight: bold;
+}
+.tour-box{
+    background-color: var(--blue);
+    color: var(--white);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 12px;
+}
+.tour-box1{
+    background-color: var(--white);
+    color: var(--blue);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 12px;
+}
+.tour-img img{
+    width: 100%;
+    border-radius: 12px;
+}
+.tour-place{
+    display: flex;
+    padding: 5px 0;
+    justify-content: space-between;
+}
+.tour-place p{
+    padding: 0;
+    margin: 0;
+    text-align: end;
+}
+.sp-diff{
+    font-size: 20px;
+}
+.why-us{
+    background-image: url('../images/why-us-bg.jpg');
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    padding: 30px 0;
+}
+.why-row{
+    padding: 10px;
+}
+.why-text h1{
+    color: var(--white);
+    font-family: var(--secondaryFont);
+    font-size: 36px !important;
+    font-weight: bold;
+    text-align: center;
+}
+.why-h2 {
+    display: flex;
+    align-items: center;
+}
+.why-h2 h2{
+    color: var(--white);
+    font-family: var(--primaryFont);
+    font-size: 20px !important;
+    font-weight: bold;
+}
+.why-img img{
+    width: 100%;
+}
+.most-visited{
+    background-color: var(--blue);
+    padding: 30px 0;
+}
+.mv-text h2{
+    color: var(--white);
+    font-family: var(--primaryFont);
+    font-size: 24px !important;
+    font-weight: bold;
+}
+.place-link-box{
+    background-color: var(--black);
+    padding: 30px 0;
+}
+.place-text h2{
+    color: var(--white);
+    font-family: var(--primaryFont);
+    font-size: 24px !important;
+    font-weight: bold;
+}
+.place-ul ul {
+    font-weight: 300;
+    color: var(--white);
+    font-family: var(--primaryFont) !important;
+    font-size: 18px !important;
+    list-style-type: none;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.place-ul ul li img {
+    padding-right: 5px;
+}
 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -823,6 +940,14 @@ h1.f-big {
     .r-cont-ab h3 {
         font-size: 30px;
     }
+
+
+    .tour-place h3{
+        font-size: 18px !important;
+    }
+    .tour-place p{
+        font-size: 12px !important;
+    }
 }
 
 
@@ -933,6 +1058,30 @@ h1.f-big {
     }
     .abus-text{
         padding-top: 40px;
+    }
+
+     /* ###### tour css ###### */
+    .why-img img {
+        width: 200px;
+    }
+    .why-img{
+        text-align: center;
+    }
+    .why-h2 h2 {
+        text-align: center;
+    }
+    .why-h2{
+        justify-content: center;
+        padding: 10px 0;
+    }
+    .why-text{
+        padding: 20px;
+    }
+    .tour-place h3{
+        font-size: 30px !important;
+    }
+    .tour-place p{
+        font-size: 18px !important;
     }
 }
 
@@ -1155,5 +1304,39 @@ h1.f-big {
     .r-cont-ab h3,
     .r-cont-ab h2 {
         font-size: 20px !important;
+    }
+
+        /* tours-media */
+
+    .sp-text h1{
+        font-size: 18px !important;
+    }
+    .tour-box,.tour-box1{
+        margin: 10px 20px;
+    }
+    .why-img img {
+        width: 120px;
+    }
+    .why-img{
+        text-align: center;
+    }
+    .why-h2 h2 {
+        text-align: center;
+    }
+    .why-h2{
+        justify-content: center;
+        padding: 10px 0;
+    }
+    .why-text h1 {
+        font-size: 28px !important;
+    }
+    .tour-place h3{
+        font-size: 20px !important;
+    }
+    .tour-place p{
+        font-size: 14px !important;
+    }
+    .tour-package {
+        margin: 40px 0;
     }
 }
