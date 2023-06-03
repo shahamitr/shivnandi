@@ -23,6 +23,120 @@
     display: none;
 }
 
+.btn-whatsapp-pulse {
+	background: #25d366;
+	color: white;
+	position: fixed;
+	bottom: 20px;
+	left: 20px;
+	font-size: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 0;
+	height: 0;
+	padding: 20px;
+	text-decoration: none;
+	border-radius: 50%;
+	animation-name: pulse;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+}
+.btn-call-pulse {
+	background: #d2131b;
+	color: white;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	font-size: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 0;
+	height: 0;
+	padding: 20px;
+	text-decoration: none;
+	border-radius: 50%;
+	animation-name: pulse1;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+}
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+	}
+	80% {
+		box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+	}
+}
+@keyframes pulse1 {
+	0% {
+		box-shadow: 0 0 0 0 #d2131b;
+	}
+	80% {
+		box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+	}
+}
+
+.btn-whatsapp-pulse-border {
+	bottom: 20px;
+	left: 20px;
+	animation-play-state: paused;
+}
+.btn-call-pulse-border {
+	bottom: 20px;
+	right: 20px;
+	animation-play-state: paused;
+}
+
+.btn-whatsapp-pulse-border::before {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+	padding: 10px;
+	border: 25px solid #25d366;
+	opacity: 0.75;
+	animation-name: pulse-border;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+}
+.btn-call-pulse-border::before {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+	padding: 10px;
+	border: 25px solid #d2131b;
+	opacity: 0.75;
+	animation-name: pulse-border;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+}
+
+@keyframes pulse-border {
+	0% {
+		padding: 17px;
+		opacity: 0.75;
+	}
+	75% {
+		padding: 40px;
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+
+header{
+    position: sticky;
+    top:0;
+    background-color: white;
+    z-index: 1000;
+}
 a {
     text-decoration: none !important;
     color: var(--black) !important;
@@ -78,8 +192,7 @@ nav {
     padding-top: 50px;
 }
 
-.h-text h1,
-.h-text2 h1 {
+.h-text h1{
     color: var(--white);
     font-weight: bolder;
     text-align: center;
@@ -87,11 +200,14 @@ nav {
     margin-bottom: 0;
     font-family: var(--secondaryFont);
 }
-
-.h-text2 h1 {
+.h-text2 h1 a{
+    color: var(--white) !important;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 0;
     font-family: var(--primaryFont);
     font-weight: 300;
-    letter-spacing: 1 !important;
+    letter-spacing: 1px !important;
     font-size: 50px !important;
 }
 
@@ -104,10 +220,14 @@ nav {
 }
 
 .hero-car {
-    width: 465px;
+    width: 400px;
     padding-top: 35px;
+    z-index: 0;
 }
-
+.hero-car img{
+    width: 100%;
+    z-index: 0;
+}
 
 
 
@@ -150,11 +270,12 @@ nav {
 }
 
 .black-box {
-    width: 370px;
-    background-color: var(--black);
-    height: 340px;
-    margin-top: 40px;
-    padding: 0 20px;
+    color: var(--blue);
+
+    padding: 0 25px !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    font-family: var(--secondaryFont);
 }
 
 .black-box p {
@@ -162,33 +283,16 @@ nav {
     font-size: 36px !important;
     font-weight: bold !important;
     padding-top: 20px;
+
 }
 
 .black-box input {
-    font-weight: bold;
-    background-color: transparent;
+
     border: none;
-    border-bottom: 2px solid beige;
-    width: 100%;
-    font-size: 24px;
     color: whitesmoke;
     padding-top: 10px;
 }
 
-.black-box input:focus {
-    outline: none;
-}
-
-.submit-btn {
-    color: var(--yellow) !important;
-    font-size: 36px !important;
-    font-weight: bold !important;
-    padding-top: 20px;
-    display: inline-block;
-    width: 100%;
-    background-color: transparent;
-    border: none;
-}
 
 
 
@@ -269,6 +373,12 @@ nav {
 
 .cars-box img {
     height: 110px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.cars-box img:hover { 
+    transform: scale(1.1);
+
 }
 
 .cars-range {
@@ -341,6 +451,7 @@ nav {
 
 .best-box {
     margin: 20px;
+    justify-content: center;
 }
 
 .icon {
@@ -416,6 +527,7 @@ nav {
     font-size: 16px !important;
     font-weight: 300;
     margin: 0;
+    text-align: justify;
 }
 
 
@@ -425,23 +537,27 @@ nav {
     padding: 40px 0;
 }
 
-.ready-text h1,
-.ready-text h2 {
+.ready-text h1 {
     font-weight: bold;
     color: var(--white);
     font-family: var(--primaryFont) !important;
     text-align: center;
     font-size: 30px !important;
 }
-
-.ready-text h2 {
-    font-family: var(--secondaryFont);
-    color: var(--yellow);
+.ready-text h2 a{
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    font-size: 30px !important;
+    font-family: var(--secondaryFont) !important;
+    color: var(--yellow) !important;
+    width: 100%;
 }
+
 
 .footer {
     background-color: var(--black);
-    padding: 40px 0;
+    padding: 55px 0;
 }
 
 .f-logo {
@@ -560,6 +676,10 @@ h1.f-big {
 
 .cars-box-sec img {
     height: 110px;
+    transition: 0.5s ease !important;
+}
+.cars-box-sec img:hover{
+    transform: scale(1.1) !important;
 }
 
 .cars-box-sec h1 {
@@ -609,14 +729,31 @@ h1.f-big {
 
 .r-cont {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+.r-cont img{
+   width: 60px;
+}
+.r-cont p{
+    margin: 0;
+    padding: 0;
+ }
+ .r-cont span.num{
+    text-align: center !important;
+    color: var(--red);
+    font-family: var(--secondaryFont);
+    font-size: 46px;
+    font-weight: 300;
+    display: inline-block;
+ }
 
-.r-cont h3 {
+.r-cont h5 {
     text-align: center;
     color: var(--blue);
     font-family: var(--secondaryFont);
-    font-size: 30px;
-    font-weight: 300;
+    font-size: 20px;
 }
 
 .r-cont h2 {
@@ -651,7 +788,7 @@ h1.f-big {
     color: var(--white);
     font-family: var(--secondaryFont);
     font-size: 46px !important;
-    padding: 70px 0;
+    padding: 15% 0;
 }
 .ab-us{
     background-color: var(--white);
@@ -661,6 +798,9 @@ h1.f-big {
     color: var(--black);
     font-family: var(--secondaryFont);
     font-size: 30px !important;
+}
+.abus-row{
+    padding: 40px 0;
 }
 .abus-text p{
     text-align: justify;
@@ -675,14 +815,25 @@ h1.f-big {
     padding: 40px 0px;
 }
 
+
+.r-cont-ab img{
+   width: 60px;
+}
+.r-cont-ab p{
+    margin: 0;
+    padding: 0;
+ }
 .r-cont-ab {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.r-cont-ab h3 {
+.r-cont-ab h5 {
     text-align: center;
     color: var(--white);
     font-family: var(--secondaryFont);
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 300;
 }
 .r-cont-ab h2 {
@@ -693,15 +844,27 @@ h1.f-big {
     font-weight: 300;
     display: inline-block;
 }
+.r-cont-ab span.num{
+    text-align: center !important;
+    color: var(--white);
+    font-family: var(--secondaryFont);
+    font-size: 46px;
+    font-weight: 300;
+    display: inline-block;
+ }
 .e-star-ab {
     color: var(--white);
 }
 .ab-map{
-    background-image: url('../images/bg-map.jpg') !important;
     width: 100%;
-    background-position: center;
-    background-size: cover;
-    height: 400px;
+    padding:40px 0;
+}
+.submit-btn2{
+    background-color: var(--blue)!important;
+    border: none;
+    padding: 8px 12px;
+    color: white;
+    border-radius: 10px;
 }
 
 
@@ -832,10 +995,6 @@ h1.f-big {
     .f-logo img {
         width: 196px;
     }
-
-    .f-link p {
-        margin-left: 26px;
-    }
     .abus-row{
         padding: 40px 0;
     }
@@ -900,10 +1059,6 @@ h1.f-big {
         line-height: 1.2;
     }
 
-    .cars-box-sec img {
-        height: 70px;
-    }
-
     .cars-box-sec h1 {
         font-size: 18px !important;
     }
@@ -941,6 +1096,10 @@ h1.f-big {
         font-size: 30px;
     }
 
+    .cars-box-sec img{
+        height: 75px !important;
+        transition: 0.5s ease !important;
+    }
 
     .tour-place h3{
         font-size: 18px !important;
@@ -953,9 +1112,9 @@ h1.f-big {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
-    .black-box {
+    /* .black-box {
         width: 500px !important;
-    }
+    } */
 
     .book-now-box {
         justify-content: center !important;
@@ -1044,6 +1203,10 @@ h1.f-big {
     .cars-box-sec h1 {
         padding-top: 10px;
     }
+    .cars-box-sec img{
+        height: 80px !important;
+        transition: 0.5s ease !important;
+    }
 
 
       /* ###### about us ###### */
@@ -1116,6 +1279,7 @@ h1.f-big {
         width: 280px;
     }
 
+
     .menu {
         display: none;
         width: 100%;
@@ -1130,7 +1294,7 @@ h1.f-big {
         font-size: 35px !important;
     }
 
-    .h-text2 h1 {
+    .h-text2 h1 a{
         font-size: 35px !important;
     }
 
@@ -1139,9 +1303,9 @@ h1.f-big {
         letter-spacing: 5.25px !important;
     }
 
-    .black-box {
+    /* .black-box {
         width: 280px !important;
-    }
+    } */
 
     .best-text h1 {
         font-size: 40px !important;
@@ -1247,7 +1411,8 @@ h1.f-big {
     }
 
     .cars-box-sec img {
-        height: 80px;
+        height: 80px !important;
+        transition: 0.5s ease !important;
     }
 
     .cars-title h1 {
